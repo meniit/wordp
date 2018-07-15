@@ -85,6 +85,11 @@ a.goto-next.scrolly {
     border-bottom: none;
 }
 
+/* Remove Uppercase */
+#header p {
+    text-transform: none;
+}
+
 /* Return to top */
 #back2Top {
     width: 40px;

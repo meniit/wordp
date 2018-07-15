@@ -424,7 +424,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<header class="major">
 						<h2>Get in touch</h2>
 					</header>
-					<form method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSdG4g4EKzgNLxsm-XbYeaEBqIQ3Ve4wFOEyoXYm8f0aERZxLg/formResponse">
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='https://meniit.github.io/wordp/';}"></iframe>
+					<form method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSdG4g4EKzgNLxsm-XbYeaEBqIQ3Ve4wFOEyoXYm8f0aERZxLg/formResponse" target="hidden_iframe"
+					onsubmit="submitted=true;">
 						<div class="row gtr-uniform">
 							<div class="col-6 col-12-xsmall"><input type="text" name="entry.547968310" id="name" placeholder="Name" /></div>
 							<div class="col-6 col-12-xsmall"><input type="email" name="emailAddress" id="email" placeholder="Email" /></div>
@@ -462,6 +464,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">var submitted=false;</script>
 			
 			<script>
 			/*Scroll to top when arrow up clicked BEGIN*/

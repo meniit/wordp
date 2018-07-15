@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"      rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	</head>
 	<body class="is-preload">
@@ -18,13 +19,15 @@
 			<section id="header">
 				<header class="major">
 					<h1>wiseboo.com</h1>
-					<p>Experts in forming concret decking, foundation, slabs, and walls.</p>
+					<p>We deliver cost effect soltions that simplifies the home builders most challening task.</p><!-- 
+					<p>Be it foundation casting, decking and slabs, sceptic tank casting or walls.</p>
+					<p>We can help you make it stress free</p> -->
 				</header>
 				 <div class="container">
 					<!-- <ul class="actions special">
 						<li><a href="#one" class="button primary scrolly">wiseboo.com</a></li>						
 					</ul> -->
-					<a href="#one" class="goto-next scrolly"><i class="fas fa-angle-double-down"></i></a>
+					<a href="#one" class="goto-next scrolly"><i class="fas fa-angle-double-down"></i></a>					
 				</div> 
 			</section>
 
@@ -50,23 +53,23 @@
 						<header class="major">
 							<h2>Our Services</h2>
 						</header>
-						<p>Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet vulputate.</p>
+						<p>Wiseboo provides services that helps home builders reduce construction cost. Our project completion ratio is outstanding and professional.</p>
 						<ul class="icons-grid">
 							<li>
-								<span class="icon major fa-camera-retro"></span>
-								<h3>Magna Etiam</h3>
+								<a href="#"><span class="icon major fa-th-large"></span>
+								<h3>Framework</h3></a>
 							</li>
 							<li>
-								<span class="icon major fa-pencil"></span>
-								<h3>Lorem Ipsum</h3>
+								<a href="#"><span class="icon major fa-braille"></span>
+								<h3>Scaffolding</h3></a>
 							</li>
 							<li>
-								<span class="icon major fa-code"></span>
-								<h3>Nulla Tempus</h3>
+								<a href="#"><span class="icon major fa-tint"></span>
+								<h3>Water Purification</h3></a>
 							</li>
 							<li>
-								<span class="icon major fa-coffee"></span>
-								<h3>Sed Feugiat</h3>
+								<a href="#"><span class="icon major fa-chart-bar"></span>
+								<h3>Cost Analysis</h3></a>
 							</li>
 						</ul>
 					</div>
@@ -437,11 +440,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>
-					</ul>
-					<a href="#header" class="goto-next scrolly">Up</a>
+						<li>Copywrite &copy; WISEBOO.com 2018</li><li>Alrights reserved</li>
+					</ul>					
 				</footer>
+				<a id="back2Top" title="Back to top" href="#header"><i class="fas fa-chevron-circle-right"></i></a>
 			</section>
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -451,6 +455,26 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<script>
+			/*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
 
+});
+ /*Scroll to top when arrow up clicked END*/
+			</script>
 	</body>
 </html>

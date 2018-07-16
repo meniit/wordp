@@ -424,14 +424,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<div class="container">
 					<header class="major">
 						<h2>Get in touch</h2>
-					</header>
-					
-					<form id="getintouc" method="POST" action="" target="no-target">
+					</header>									
+					<form id="getintouch" method="POST" action="" target="no-target">
 						<div class="row gtr-uniform">
 							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" required placeholder="Name" /><span class="validity"></div>
 							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" required placeholder="Email" /><span class="validity"></div>
 							<div class="col-6 col-12-xsmall"><input type="tel" name="telNo" id="telNo" required placeholder="Phone" pattern="[0-9]{11}"><span class="validity"></span></div>
-							<div class="col-12">
+							<div class="col-6 col-12-xsmall">
 								<select name="demo-category" id="demo-category" required>
 									<option value="">- Category -</option>
 									<option value="1">Cost Analysis</option>
@@ -447,9 +446,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</ul>
 							</div>
 						</div>
-					</form>
+					</form>					
+					<iframe src="#" name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 					<p id="input-feedback"></p>
-					<iframe src="#" id="no-target" name="no-target" style="visibility-hidden"></iframe>
+					
 				</div>
 				<footer>
 					<ul class="icons">
@@ -478,7 +478,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 			
 			<script>
-			$('#getintouc').one('submit'.function(){
+			$('#getintouch').one('submit'.function(){
 				var inputName = encodeURIComponent($('#name').val());
 				var inputEmail = encodeURIComponent($('#email').val());
 				var inputPhone = encodeURIComponent($('#telNo').val());
@@ -495,7 +495,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				ar submitURL = (baseURL + inputName + inputEmail + inputPhone + inputSelect + inputMessage + submitRef);
 				console.log(submitURL);
 				$(this)[0].action=submitURL;
-				$('#input-feedback').addClass('active').val('WISEBOO.com has received your message. Thank you!');
+				$('#input-feedback').text('WISEBOO.com has received your message. Thank you!');
     });
 			</script>
 			

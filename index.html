@@ -425,30 +425,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<header class="major">
 						<h2>Get in touch</h2>
 					</header>
-					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='https://meniit.github.io/wordp/';}"></iframe>
-					<form method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSdG4g4EKzgNLxsm-XbYeaEBqIQ3Ve4wFOEyoXYm8f0aERZxLg/formResponse" target="hidden_iframe"
-					onsubmit="submitted=true;">
+					
+					<form id="getintouc" method="POST" action="" target="no-target">
 						<div class="row gtr-uniform">
-							<div class="col-6 col-12-xsmall"><input type="text" name="entry.547968310" id="name" required placeholder="Name" /> <span class="validity"></span></div>
-							<div class="col-6 col-12-xsmall"><input type="email" name="emailAddress" id="email" required placeholder="Email" /> <span class="validity"></span></div>
+							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" required placeholder="Name" /><span class="validity"></div>
+							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" required placeholder="Email" /><span class="validity"></div>
 							<div class="col-6 col-12-xsmall"><input type="tel" name="telNo" id="telNo" required placeholder="Phone" pattern="[0-9]{11}"><span class="validity"></span></div>
-							<div class="col-6 col-12-xsmall">
-										<select name="entry.2074249672" id="demo-category" required>
-											<option value="">-- Services --</option>
-											<option value="entry.2074249672">Framework</option>
-											<option value="entry.2074249672">Scaffolding</option>
-											<option value="entry.2074249672">Water Purification</option>
-											<option value="entry.2074249672">Cost Analysis</option>
-										</select>
+							<div class="col-12">
+								<select name="demo-category" id="demo-category" required>
+									<option value="">- Category -</option>
+									<option value="1">Cost Analysis</option>
+									<option value="1">Framework</option>
+									<option value="1">Scaffolding</option>
+									<option value="1">Cost Analysis</option>
+								</select>
 							</div>
-							<div class="col-12"><textarea name="entry.193184105" id="message" required placeholder="Message" rows="4"></textarea> <span class="validity"></span></div>							
+							<div class="col-12"><textarea name="message" id="message" required placeholder="Message" rows="4"></textarea><span class="validity"></div>
 							<div class="col-12">
 								<ul class="actions special">
-									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input id="form-submit" type="submit" value="Send Message" class="primary" /></li>
 								</ul>
 							</div>
 						</div>
 					</form>
+					<p id="input-feedback"></p>
+					<iframe src="#" id="no-target" name="no-target" style="visibility-hidden"></iframe>
 				</div>
 				<footer>
 					<ul class="icons">
@@ -475,7 +476,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script type="text/javascript">var submitted=false;</script>
+			
+			<script>
+			$('#getintouc').one('submit'.function(){
+				var inputName = encodeURIComponent($('#name').val());
+				var inputEmail = encodeURIComponent($('#email').val());
+				var inputPhone = encodeURIComponent($('#telNo').val());
+				var inputSelect = encodeURIComponent($('#demo-category').val());
+				var inputMessage = encodeURIComponent($('#message').val());
+				var nameID = "entry.547968310";
+				var emailID = "emailAddress";
+				var emailID = name="telNo";
+				var selectID = "entry.2074249672";
+				var messageID = "entry.193184105";
+				
+				var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdG4g4EKzgNLxsm-XbYeaEBqIQ3Ve4wFOEyoXYm8f0aERZxLg/formResponse';
+				var submitRef = '&submit=5959715481089506133';
+				ar submitURL = (baseURL + inputName + inputEmail + inputPhone + inputSelect + inputMessage + submitRef);
+				console.log(submitURL);
+				$(this)[0].action=submitURL;
+				$('#input-feedback').addClass('active').val('WISEBOO.com has received your message. Thank you!');
+    });
+			</script>
 			
 			<script>
 			/*Scroll to top when arrow up clicked BEGIN*/

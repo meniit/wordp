@@ -427,7 +427,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</header>									
 					<form id="getintouch" method="POST" action="" target="no-target">
 						<div class="row gtr-uniform">
-							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" required placeholder="Name" /><span class="validity"></div>
+							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="input-name" required placeholder="Name" /><span class="validity"></div>
 							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" required placeholder="Email" /><span class="validity"></div>
 							<div class="col-6 col-12-xsmall"><input type="tel" name="telNo" id="telNo" required placeholder="Phone" pattern="[0-9]{11}"><span class="validity"></span></div>
 							<div class="col-6 col-12-xsmall">
@@ -478,15 +478,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 			
 			<script>
-			$('#getintouch').one('submit'.function(){
-				var inputName = encodeURIComponent($('#name').val());
+			$('#getintouch').one('submit',function() {
+				var inputName = encodeURIComponent($('#input-name').val());
 				var inputEmail = encodeURIComponent($('#email').val());
 				var inputPhone = encodeURIComponent($('#telNo').val());
 				var inputSelect = encodeURIComponent($('#demo-category').val());
 				var inputMessage = encodeURIComponent($('#message').val());
 				var nameID = "entry.547968310";
 				var emailID = "emailAddress";
-				var emailID = name="telNo";
+				var phoneID = "telNo";
 				var selectID = "entry.2074249672";
 				var messageID = "entry.193184105";
 				

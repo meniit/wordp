@@ -7,6 +7,17 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Add some css to Locate Us */
+.fit-collapsable {
+    list-style-type: none;
+    margin-bottom: 10px;
+    #border: 1px solid #ddd;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1899,7 +1910,7 @@ p.firma {
 		text-decoration: none;
 		margin: 0;
 		height: 100%;
-		overflow: hidden;
+		#overflow: hidden;
 	}
 
 		html body:before {
@@ -2864,8 +2875,8 @@ p.firma {
 
 			#header header h1 {
 				font-size: 3em;
-				line-height: 1.25em;
-				margin: 0;
+				#line-height: 1.25em;
+				#margin: 0;
 			}
 
 				#header header h1:after {

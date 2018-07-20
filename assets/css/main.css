@@ -11,11 +11,19 @@
 .fit-collapsable {
     list-style-type: none;
     margin-bottom: 10px;
-    #border: 1px solid #ddd;
+	float:left;
+	list-style-type: none;
+	padding:3px;
 }
-ul, ol, nav ul, nav ol {
-    list-style: none;
-    list-style-image: none;
+.fit-collapsable  ul, ol, nav ul, nav ol {
+	list-style-type: none;
+}
+.justify-txt {
+	text-align: justify;
+}
+.un_line {
+	font-size: medium;
+	text-decoration: underline;
 }
 
 html, body, div, span, applet, object,
